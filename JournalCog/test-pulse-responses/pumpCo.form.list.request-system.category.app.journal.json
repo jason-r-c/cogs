@@ -1,0 +1,84 @@
+/**
+ * Pulse request:
+ *  - my.$pulse( "pumpCo.form.list.request", { "category": [ "system.category.app.journal" ] } );
+ *
+ * Pulse response
+ *  - pumpCo.form.list.response
+ *  - Remember we get different responses back due to the asynchronous timings
+ */
+
+{
+    "pulseHeader": {
+        "mep": "inout",
+        "pulseType": "document",
+        "pulseClass": "pumpCo.form.list.response",
+        "endpointId": "51DDD8E9-0B26-43F3-B180-CFA42BB47A83",
+        "referenceId": "3BE65B1A-33C3-4AA2-91C9-6F41157F1FD6",
+        "referer": "https://dev.cnect.to/pumpco?socket=false",
+        "pulseId": "9ea3a20a-af33-410b-b08a-c7b1cd1d6ef2",
+        "timestamp": "2017-04-08T04:41:15.235",
+        "requestingComponentId": "f022bf074d16dfe3737c3da1",
+        "componentId": "7643c6b588b4fe45737c3da1",
+        "instanceRoutingSlip": [
+
+        ]
+    },
+    "pulseBody": {
+        "questionnaire": [
+            {
+                "id": "58e7af7294cd420785f1599c",
+                "name": "system.form.journal.action.addTodo",
+                "label": "add a todo",
+                "type": "TYPE_FORM",
+                "categories": [
+                    "system.category.app.planner",
+                    "system.category.app.journal"
+                ],
+                "context": {
+
+                },
+                "sortOrder": 2147483647,
+                "requirements": {
+
+                }
+            },
+            {
+                "id": "58e7af7294cd420785f1599a",
+                "name": "system.form.journal.action.addNote",
+                "label": "add a note",
+                "type": "TYPE_FORM",
+                "categories": [
+                    "system.category.app.planner",
+                    "system.category.app.journal"
+                ],
+                "context": {
+
+                },
+                "sortOrder": 2147483647,
+                "requirements": {
+
+                }
+            },
+            {
+                "id": "58e7af7294cd420785f1599d",
+                "name": "system.form.journal.action.addAppointment",
+                "label": "add an appointment",
+                "type": "TYPE_FORM",
+                "categories": [
+                    "system.category.app.planner",
+                    "system.category.app.journal"
+                ],
+                "context": {
+
+                },
+                "sortOrder": 2147483647,
+                "requirements": {
+
+                }
+            }
+        ],
+        "status": {
+            "code": "success"
+        }
+    }
+}

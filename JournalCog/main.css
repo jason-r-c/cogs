@@ -1,0 +1,159 @@
+h1 { color:blue; }
+
+.card-comment-style {
+  background-color: #ececec;
+  padding: 10px;
+}
+
+.flex-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 10px;
+
+}
+
+.flex-container-column.flex-col-2 {
+    flex-grow: 0 !important;
+}
+
+.odd {
+  background: lightgrey;
+}
+
+.journal-cog-sticky-footer {
+  margin-top: 7px;
+}
+
+/* Journal card main title */
+.lrc-col1 .h4::first-letter {
+    text-transform: capitalize;
+}
+
+/* Journal card type title */
+.journal-entry-type {
+    text-transform: capitalize;
+}
+
+/* Journal card icon */
+.lrc-col2 .lrc-img1 {
+    width: 32px;
+    min-width: initial !important;
+}
+
+/* Journal card */
+.lrc-body img {
+    width: 32px;
+    margin-bottom: 5px;
+}
+
+/* Journal card username */
+.journal-cog-username {
+  display: inline;
+  position: relative;
+  top: -5px;
+  margin-left: 10px;
+}
+
+/* Journal card body text */
+.journal-body-text {
+  text-transform: capitalize;
+}
+
+/**
+ * Journal card: displays more space when the sub title (card type)
+ * is not displayed
+ */
+.journal-cog-no-sub-title {
+  margin-top: 10px;
+}
+
+/* Badges: due date and completed status */
+.journal-cog-badge {
+  padding: 3px 8px;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.journal-cog-due-date {
+  background-color: gray;
+  margin-bottom: 15px;
+}
+
+.journal-cog-status-completed {
+  background-color: #81C784;
+  margin-bottom: 15px;
+}
+
+.journal-cog-status-not-completed {
+  background-color: #FFB74D;
+  margin-bottom: 15px;
+}
+
+/* LRC styles */
+
+.journal-card-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  overflow: auto;
+  margin-bottom: 30px;
+  background-image: url(/PumpHouse/uploads/system/JournalCog//images/journal_navcog_transparent.png);
+  background-repeat: no-repeat;
+  background-position: 50% 150px;
+  background-size: 300px;
+  background-color: rgba(255,255,255,0.25);
+}
+
+.journal-card {
+    /*width: 960px;*/
+    margin-bottom: 15px;
+}
+
+.lrc {
+    padding: 15px;
+    /*max-width: 960px;*/
+}
+
+/* Actions buttons */
+.journal-card .lrc-col2 .btn {
+  margin-top: 10px;
+  text-transform: capitalize;
+  height: 40px;
+  width: 60px;
+}
+
+/* Add appflow buttns */
+.journal-add-appflow-btns {
+  padding: 10px 0;
+  background-color: rgba(255,255,255,0.25);
+}
+
+.journal-card-add-btn {
+  margin: 2px 5px;
+  padding: 5px;
+  background-color: #ccc;
+}
+
+/* Display message when no entries available */
+.journal-no-entries {
+  margin-top: 2%;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+/* Bar displays at the bottom */
+.journal-bottom-bar {
+  padding-top: 4px;
+}

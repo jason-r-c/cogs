@@ -1,0 +1,25 @@
+<div class="device-manager-container">
+  <style data-bind="stylesheet:$data.stylesheet($data)"></style>
+  <!--
+    // Add device button
+  -->
+  <!-- ko with:$data.addDevice -->
+    <button data-bind="button:$data" class="btn is-success width3 height2 comfy-btn-margin-20"></button>
+  <!-- /ko -->
+
+  <!--
+    // Display empty message if no devices have been added
+  -->
+  <!-- ko if:$data.deviceListEmpty() -->
+    <p data-bind="i18n:'device-list-empty'"></p>
+  <!-- /ko -->
+
+  <!--
+    // Display all devices using Small rich cards
+  -->
+  <!-- ko if:$data.cards().length > 0 -->
+  <div data-bind="foreach:$data.cards" class="list">
+    <div data-bind="template:{name:$parent.template($data)}" class="card-list"></div>
+  </div>
+  <!-- /ko -->
+</div>

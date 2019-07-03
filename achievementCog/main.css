@@ -1,0 +1,55 @@
+/* main.css */
+
+/**
+ * Single line item Card
+ * Make Achievement group heading look neater
+ */
+
+ /* The whole single line template */
+.sli {
+  background-color: transparent;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #272727;
+  cursor: default;
+}
+
+/* The heading text itself */
+.sli-pri-desc {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-left: 20px;
+}
+
+/* Used to control padding left on the achievement group heading */
+.sli-pri-img {
+  display: none;
+}
+
+/**
+ * Small rich card
+ */
+
+/* Capitalise the achievement name */
+.card .h4 {
+    text-transform: capitalize;
+}
+
+/* Add extra space below cards */
+.card {
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Increase font size for achievement description */
+.card p {
+  font-size: 15px !important;
+  text-transform: capitalize;
+}
+
+/* Hide button container as there are no 'action' buttons */
+.src-act1 {
+  display: none;
+}

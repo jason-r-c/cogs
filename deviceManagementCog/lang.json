@@ -1,0 +1,12 @@
+{
+  "sv": {
+    "card-manage": "Hantera den här enheten",
+    "add-device": "Lägga till",
+    "device-list-empty": "Inga enheter har lagts"
+  },
+  "en": {
+    "card-manage": "Manage this device",
+    "add-device": "Add device",
+    "device-list-empty": "No devices have been added"
+  }
+}

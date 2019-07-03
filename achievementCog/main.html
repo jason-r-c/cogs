@@ -1,0 +1,18 @@
+<!-- Load Single line item & Small rich card stylesheets -->
+<style data-bind="stylesheet:$data.singleLineItemStyle($data)"></style>
+<style data-bind="stylesheet:$data.smallRichCardStyle($data)"></style>
+
+<!--
+  // Loop through the cards observable, check whether _tmpl is single line item or small rich card
+  // then print out the appropriate template
+-->
+
+<!-- ko foreach: $data.cards() -->
+  <!-- ko if: $data._tmpl == 'single-line-item' -->
+    <div data-bind="template: {name: $parent.singleLineItemTpl($data) }"></div>
+  <!-- /ko -->
+
+  <!-- ko if: $data._tmpl == 'small-rich-card' -->
+    <div data-bind="template: {name: $parent.smallRichCardTpl($data) }"></div>
+  <!-- /ko -->
+<!-- /ko --><!-- END $data.cards() -->

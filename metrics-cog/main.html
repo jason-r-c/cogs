@@ -1,0 +1,29 @@
+
+<div name="home" class="screen v2">
+  <h3 data-bind="i18n:'lang-HealthSolutions-hivMetrics-title'" class="title"><!-- @comment title --></h3>
+
+  <!-- @JC: If there is NOT a pulse response, display a 'no data' message  -->
+  <!-- ko if:$data.empty -->
+    <p data-bind="i18n:'lang-HealthSolutions-hivMetrics-empty'"><!-- @comment empty message --></p>
+  <!-- /ko -->
+
+  <div data-bind="foreach: $data.reports" class="reports">
+  <!-- <div data-bind="foreach: console.log($data.reports())" class="reports"> -->
+    <h3 data-bind="text: $data.label"></h3>
+    <p data-bind="text: $data.description"></p>
+
+    <div data-bind="foreach: $data.table" class="table">
+      <!-- ko if:$index()===0 -->
+      <div data-bind="foreach: $data" class="tr">
+          <div data-bind="html:$data.value, css:$data.style" class="td th"></div>
+      </div>
+      <!-- /ko -->
+
+      <!-- ko if:$index()>0 -->
+      <div data-bind="foreach: $data" class="tr">
+          <div data-bind="html:$data.value, css:$data.style" class="td"></div>
+      </div>
+      <!-- /ko -->
+    </div>
+  </div> <!-- // end of pulses -->
+</div>

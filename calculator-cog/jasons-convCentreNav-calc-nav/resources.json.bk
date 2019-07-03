@@ -1,0 +1,30 @@
+{
+    "script":   "/system/navigationCog/main.js",
+    "html":     "/system/navigationCog/main.html",
+    "style":    "/system/convCentreNav/main.css",
+    "lang":     "/system/convCentreNav/lang.json",
+    "image":    [ "/system/convCentreNav/images/icon.jpg", "/system/convCentreNav/images/placeholder.png" ],
+    // Order property controls the layout in multi-cog spaces ( e.g. home space )
+    "order":    -100,
+    //"cogType":  "system",
+    "cogType":  "platform",
+    "height":   "235px",
+    "width":    "235px",
+    "params": {
+        "descriptionText":  "lang-system-ConversationCentreNav-descriptionText",
+        "titleText":        "lang-system-ConversationCentreNav-titleText",
+        "imageName":        "/system/convCentreNav/images/icon.jpg",
+        "imageLink":        "System.convCentreSpace",
+        "basePath":         "/PumpFaceSystem/Hydra/fixtures"
+    },
+    "capability": [
+        {"direction":"PRODUCER","version":"0.1","trait":"pumpCo.user.space.request"},
+        {"direction":"CONSUMER","version":"0.1","trait":"pumpCo.user.space.response"},
+        {"direction":"PRODUCER","version":"0.1","trait":"pumpCo.roadie.hold.request"},
+        {"direction":"CONSUMER","version":"0.1","trait":"pumpCo.roadie.hold.response"},
+
+        // Notifications
+        {"direction":"PRODUCER","version":"0.1","trait":"pumpCo.user.app.notification.updateKey.request"},
+        {"direction":"CONSUMER","version":"0.1","trait":"pumpCo.user.app.notification.updateKey.response"}
+    ]
+}

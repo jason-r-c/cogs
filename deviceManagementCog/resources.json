@@ -1,0 +1,45 @@
+{
+    "script":   [
+                "/system/common/roadie/forms.js",
+                "/system/common/roadie/navigation.js",
+                "/system/deviceManagementCog/main.js"
+              ],
+    "html":     "/system/deviceManagementCog/main.html",
+    "style":    "/system/deviceManagementCog/main.css",
+    "image":    "/system/deviceManagementCog/images/deviceManagement_navcog.png",
+    "cogType":  "system",
+    "left":     "0px",
+    "top":      "0px",
+    "params": {
+        // Instruct the Pump that you would like the exchange unwrapped into pulses.
+        "unwrapExchange":"true"
+    },
+    "layout": {
+        "version": "2"
+    },
+    "cards":[
+        { "name": "phil/collections/small-rich-card" }
+    ],
+    "lang":     "/system/deviceManagementCog/lang.json",
+    "capability": [
+        {"direction": "CONSUMER","trait": "pumpco.system.core.cog","version": "0.1"},
+        {"direction": "PRODUCER","trait": "internal.system.toast.update","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.event.user.device.updated","version": "0.1"},
+        {"direction": "PRODUCER","trait": "pumpCo.user.device.save.request","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.device.save.response","version": "0.1"},
+        {"direction": "PRODUCER","trait": "pumpCo.user.device.sync.request","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.device.sync.response","version": "0.1"},
+        {"direction": "PRODUCER","trait": "pumpCo.user.device.list.request","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.device.list.response","version": "0.1"},
+        {"direction": "PRODUCER","trait": "pumpCo.device.list.request","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.device.list.response","version": "0.1"},
+        {"direction": "PRODUCER","trait": "pumpCo.device.type.list.request","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.device.type.list.response","version": "0.1"},
+        {"direction": "PRODUCER","trait": "internal.system.toast.update","version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.event.core.place","version": "0.1"},
+
+        // Exception thrown when a duplicate is found.
+        {"direction": "CONSUMER","trait": "exception.pumpCo.user.device.save.duplicate","version": "0.1"}
+
+    ]
+}

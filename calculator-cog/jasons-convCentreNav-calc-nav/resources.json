@@ -1,0 +1,25 @@
+{
+    //"script":   "/system/navigationCog/jasonc-test.js",
+    "script":   "/system/convCentreNav/jasonc-test.js",
+    //"html":     "/system/navigationCog/jasonc-test.html",
+    "html":     "/system/convCentreNav/jasonc-test.html",
+    "style":    "/system/convCentreNav/jasonc-test.css",
+    "lang":     "/system/convCentreNav/lang.json",
+    "image":    [ "/system/convCentreNav/images/math-app.png", "/system/convCentreNav/images/placeholder.png" ],
+    // Order property controls the layout in multi-cog spaces ( e.g. home space )
+    "order":    -100,
+    //"cogType":  "system",
+    //"cogType":  "platform",
+    "cogType":  "user",
+    "height":   "235px",
+    "width":    "235px",
+    "params": {
+        "descriptionText":  "lang-system-ConversationCentreNav-descriptionText",
+        "titleText":        "lang-system-ConversationCentreNav-titleText",
+        "imageName":        "/system/convCentreNav/images/math-app.png",
+        "imageLink":        "System.convCentreSpace",
+        "basePath":         "/PumpFaceSystem/Hydra/fixtures",
+        "appName":          "Math app",
+        "appDescription":   "A basic aOS app for learning the basics of aOS app development"
+    }
+}

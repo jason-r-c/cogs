@@ -1,0 +1,127 @@
+/* The response pulse coming back from the server */
+[
+  {
+    "label": "Q1 2017",
+    "description": "",
+    "report": [
+      [               // $data.myFirstCsvReport
+        "Q1 2017",    // $data & $data.value
+        "DE",
+        "NO",
+        "SE"
+      ],
+      [
+        "Number of patients",
+        "1700",
+        "1600",
+        "1500"
+      ],
+      [
+        "Number of deceased patients",
+        "74",
+        "64",
+        "54"
+      ],
+      [
+        "Patients with a first positive hiv serology",
+        "22",
+        "",
+        "12"
+      ],
+      [
+        "Homosexual \/ bisexual",
+        "11.3%",
+        "21.3%",
+        "17.3%"
+      ],
+      [
+        "Heterosexual",
+        "82.3%",
+        "72.3%",
+        "67.3%"
+      ],
+      [
+        "Blood products",
+        "2.4%",
+        "1.4%"
+      ],
+      [
+        "Unknown\/Other",
+        "3.3%"
+      ],
+      [
+        "Mother-child",
+        "4.4%",
+        "3.4%"
+      ],
+      [
+        "I.V. abuse",
+        "",
+        "6.3%",
+        "8.3%"
+      ]
+    ]
+  },
+  {
+    "label": "Q4 2016",
+    "description": "",
+    "report": [
+      [               // $data.myFirstCsvReport
+        "Q4 2016",    // $data & $data.value
+        "DE",
+        "NO",
+        "SE"
+      ],
+      [
+        "Number of patients",
+        "1100",
+        "1200",
+        "1300"
+      ],
+      [
+        "Number of deceased patients",
+        "74",
+        "64",
+        "54"
+      ],
+      [
+        "Patients with a first positive hiv serology",
+        "22",
+        "",
+        "12"
+      ],
+      [
+        "Homosexual \/ bisexual",
+        "11.3%",
+        "21.3%",
+        "17.3%"
+      ],
+      [
+        "Heterosexual",
+        "82.3%",
+        "72.3%",
+        "67.3%"
+      ],
+      [
+        "Blood products",
+        "2.4%",
+        "1.4%"
+      ],
+      [
+        "Unknown\/Other",
+        "3.3%"
+      ],
+      [
+        "Mother-child",
+        "4.4%",
+        "3.4%"
+      ],
+      [
+        "I.V. abuse",
+        "",
+        "6.3%",
+        "8.3%"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+	"en":{
+		"all-applications": "all applications",
+		"professional-log-book": "professional log book",
+		"previous-roles": "previous roles",
+		"education": "education",
+		"expertise": "expertise"
+	},
+	"sv":{
+		"all-applications": "alla program",
+		"professional-log-book": "professionell loggbok",
+		"previous-roles": "tidigare roller",
+		"education": "utbildning",
+		"expertise": "kompetens"
+	}
+}

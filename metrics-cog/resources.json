@@ -1,0 +1,34 @@
+/*
+    Template Cog resources.json
+
+    The resources.json file contains all of the specifications for the Cog.
+    This includes the source code, the type,
+    the language and capabilities.
+
+    v1.0:
+ */
+{
+    // Basic configuration
+    "script":   [ "/healthsolutions/hivMetricsCog/main.js" ],
+    "html":     "/healthsolutions/hivMetricsCog/main.html",
+    "style":    "/healthsolutions/hivMetricsCog/main.css",
+    "lang":     "/healthsolutions/hivMetricsCog/lang.json",
+    "image":    [  ],
+    // The type of cog that is being created. Can be system, platform, or user
+    "cogType": "system",
+    // @JC - Params is a generic object for passing in custom / new information
+    "params": {
+    	// Instruct the Pump that you would like the exchange unwrapped into pulses.
+        "unwrapExchange":"true"
+    },
+    // Capabilities detail what pulses ( traits ) a Cog can send and what pulses it would like to receive.
+    "capability": [
+        { "direction": "CONSUMER", "trait": "pumpco.system.core.cog", "version": "0.1" },
+        { "direction": "PRODUCER", "trait": "internal.system.toast.update", "version": "0.1" },
+        { "direction": "CONSUMER", "trait": "pumpCo.user.report.group.get.response", "version": "0.1" },// @JC - response
+        { "direction": "PRODUCER", "trait": "pumpCo.user.report.group.get.request", "version": "0.1" } // @JC - request
+    ],
+    // Cards detail what Cards need to be loaded ( JS, CSS, HTML ) dynamically ( currently on AOS and PHIL )
+    "cards":[
+    ]
+}

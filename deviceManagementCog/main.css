@@ -1,0 +1,32 @@
+/*main.css*/
+
+/* Background image icon */
+.device-manager-container {
+  background-image: url('/images/deviceManagement_navcog.png');
+  background-repeat: no-repeat;
+  background-position: 50% 150px;
+  background-size: 300px;
+  background-color: rgba(255,255,255,0.25);
+  flex-grow: 1;
+}
+
+/* Add surrounding margin for 'Add device' button so looks neater */
+.comfy-btn-margin-20 {
+  margin: 20px;
+}
+
+/* Align 'manage device' to the left to look neater */
+.src-act1 > button.btn {
+  text-align: left;
+}
+
+/* Add space below cards to look neater */
+.card-list {
+    margin-bottom: 20px;
+}
+
+/* Display device icon on left side of card */
+.device-manager-container .src-col1 {
+  order: 1;
+  margin-left: 10px;
+}

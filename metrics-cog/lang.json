@@ -1,0 +1,10 @@
+{
+    "sv": {
+      "lang-HealthSolutions-hivMetrics-empty": "ingen metriska data tillgängliga för visning",
+      "lang-HealthSolutions-hivMetrics-title": "benchmarking"
+  },
+  "en": {
+    "lang-HealthSolutions-hivMetrics-empty": "no metric data available for display",
+    "lang-HealthSolutions-hivMetrics-title": "Benchmarking"
+  }
+}

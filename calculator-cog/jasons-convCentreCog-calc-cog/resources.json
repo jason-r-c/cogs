@@ -1,0 +1,6 @@
+{
+  "script": "/system/convCentreCog/main.js",
+  "html": "/system/convCentreCog/main.html",
+  "style": "/system/convCentreCog/main.css",
+  "lang": "/system/convCentreCog/lang.json"
+}

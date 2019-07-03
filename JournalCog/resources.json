@@ -1,0 +1,75 @@
+/*
+    Template Cog resources.json
+
+    The resources.json file contains all of the specifications for the Cog.
+    This includes the source code, the type,
+    the language and capabilities.
+
+    v1.0:
+ */
+{
+    // Basic configuration
+    "script":   [
+                  "/system/JournalCog/main.js" ,
+                  "/system/JournalCog/parser.js",
+                  "/system/common/items/aoscontact.js",
+                  "/system/common/items/aosactions.js",
+                  "/system/common/roadie/forms.js",
+                  "/system/common/roadie/navigation.js",
+
+                  // Used for testing purposes
+                  "/system/JournalCog/test-pulse-responses/allJournalTypespumpcoUserCalendarListResponse.js",
+                  "/system/JournalCog/test-pulse-responses/pumpcoUserCalendarListResponse.js",
+                  "/system/JournalCog/test-pulse-responses/iotaaUserCalendarListResponse.js"
+                ],
+    "html":     "/system/JournalCog/main.html",
+    "style":    "/system/JournalCog/main.css",
+    "lang":     "/system/JournalCog/lang.json",
+
+    "image":    [
+      "/system/JournalCog/images/*.png",
+      "/system/JournalCog/images/*.jpg"
+    ],
+
+    // The type of cog that is being created. Can be system, platform, or user
+    "cogType": "system",
+    // Params is a generic object for passing in custom / new information
+    "params": {
+        // Setup variable with path to images folder
+        "cogBasePath": "/PumpHouse/uploads/images",
+
+    	// Instruct the Pump that you would like the exchange unwrapped into pulses.
+        "unwrapExchange":"true"
+    },
+    // Capabilities detail what pulses ( traits ) a Cog can send and what pulses it would like to receive.
+    "capability": [
+        { "direction": "CONSUMER", "trait": "pumpco.system.core.cog", "version": "0.1" },
+        { "direction": "PRODUCER", "trait": "internal.system.toast.update", "version": "0.1" },
+
+        // Basic Calendar functionality
+        { "direction": "PRODUCER", "trait": "pumpCo.user.calendar.list.request", "version": "0.1" },
+        { "direction": "CONSUMER", "trait": "pumpCo.user.calendar.list.response", "version": "0.1" },
+        // AMONIS: Added to listen for events
+        { "direction": "CONSUMER", "trait": "pumpCo.event.user.calendar.entry.updated", "version": "0.1" },
+
+        { "direction":"PRODUCER", "version":"0.1", "trait":"internal.contact.list.request" },
+        { "direction":"CONSUMER", "version":"0.1", "trait":"internal.contact.list.response" },
+
+        // Actions button Capabilities
+        { "direction":"PRODUCER", "version":"0.1", "trait":"pumpCo.form.list.request" },
+        { "direction":"CONSUMER", "version":"0.1", "trait":"pumpCo.form.list.response" },
+        { "direction": "PRODUCER", "trait": "pumpCo.comment.save.request", "version": "0.1" },
+        { "direction": "CONSUMER", "trait": "pumpCo.event.comment.updated", "version": "0.1" },
+
+        // Tag cloud pulses
+        { "direction": "PRODUCER", "trait": "pumpCo.user.calendar.tag.list.request", "version": "0.1" },
+        { "direction": "CONSUMER", "trait": "pumpCo.user.calendar.tag.list.response", "version": "0.1" }
+    ],
+    // Cards detail what Cards need to be loaded ( JS, CSS, HTML ) dynamically ( currently on AOS and PHIL )
+    "cards":[
+        { "name": "phil/collections/small-rich-card" },
+        { "name": "phil/collections/single-line-item" },
+        { "name": "phil/collections/three-line-item" },
+        { "name": "phil/collections/large-rich-card" }
+    ]
+}

@@ -1,0 +1,66 @@
+<!-- // Load Small rich card stylesheet -->
+<style data-bind="stylesheet:$data.largeRichCardStyle($data)"></style>
+
+<!-- // Display buttons for Add Appflow: Appointment, Note and Todo -->
+<div class="journal-add-appflow-btns">
+  <button data-bind="button: $data.addNoteButton" class="journal-card-add-btn btn widthauto"></button>
+  <button data-bind="button: $data.addTodoButton" class="journal-card-add-btn btn widthauto"></button>
+  <button data-bind="button: $data.addAppointmentButton" class="journal-card-add-btn btn widthauto"></button>
+
+  <!-- ### Tag Cloud start section 1 ### Modified to selectively show tag cloud  -->
+  <!-- ko if:$data.showTagCloud() === true -->
+
+    <!-- ko if:$data.tagCloud().length === 0 -->
+      <p>no tags available</p>
+    <!-- /ko -->
+
+    <!-- ko if:$data.tagCloud().length > 0 -->
+      <p>click tag to select</p>
+    <!-- /ko -->
+
+      <div data-bind="foreach:$data.tagCloud" class="width10-nopad tagcloud">
+        <button data-bind="click:$root.tagCloudHandler,
+                            html:$data.label,
+                            css:{
+                              'lots':$data.count > 200,
+                              'many':$data.count > 100,
+                              'some':$data.count > 25
+                            }"
+                class="btn btn-background widthauto few"></button>
+      </div>
+    <!-- /ko -->
+    <!-- ### Tag Cloud end section 1 ### -->
+
+    <!-- // Display empty message when there is no journal entries --->
+    <!-- ko if:$data.cards().length===0 -->
+  	 <p data-bind="html:oLabelEmpty" class="width5 align-center journal-no-entries"></p>
+  	<!-- /ko -->
+</div>
+
+<!-- // BEGIN journal card conainer -->
+<div class="journal-card-container">
+
+  <!-- progress bar -->
+  <div data-bind="progress:oProgress" class="progress progress-striped progress-fix-centered active"></div>
+
+  <!-- ko foreach: $data.cards() -->
+    <div data-bind="template: { name: $parent.largeRichCardTpl( $data ) }" class="journal-card"></div>
+  <!-- /ko -->
+
+  <!-- // BEGIN Bottom transport bar -->
+  <div class="width10-nopad abs abs-top app-hdr-background height3 journal-bottom-bar">
+
+    <!-- // ### tag cloud section start 2 - filter by tag button ### -->
+    <span class="height1-1-nopad width3 align-left">
+  		<input  data-bind="input:$data.txtSearch, event:{keyup:$data.btnSearch.handler}"  class="txt width8 height2" type="text" placeholder="1,234">
+      <button data-bind="button:$data.showHideTagCloud" class="svg height2 width2 svg-tag"></button>
+    </span>
+    <!-- // ### tag cloud section end 2 ### -->
+
+    <!-- // Load more journal entries button -->
+    <span class="align-right">
+      <button data-bind="button: $data.loadMore" class="journal-card-add-btn btn widthauto"></button>
+    </span>
+
+  </div><!-- // END Bottom transport bar -->
+</div><!-- // END journal card conainer -->

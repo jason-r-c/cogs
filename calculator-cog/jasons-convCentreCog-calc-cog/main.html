@@ -1,0 +1,81 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<!-- <p data-bind="text: console.log($data)" /> -->
+    <div class="calculator-container">
+
+      <!-- Calculator stuff -->
+      <div id="calculator">
+      	<!-- Screen and clear key -->
+      	<div class="top">
+					<!-- works and using -->
+      		<div class="screen"></div>
+      	</div>
+
+				<div>
+					<!-- Appears that you can use $data or not.
+						$data is the view model in the current context.
+						<input data-bind="input:myinput" />
+					-->
+					<!-- my.model.myinput -->
+
+					<!-- The input field. Disabled to prevent direct input -->
+					<div class="calculator-input-container">
+						<input data-bind="input:$data.myinput, disable: $data.disableInput" />
+						<div data-bind="click: onClearClickedV2" class="calculator-clear-button">
+							<span class="clear">C</span>
+						</div>
+					</div>
+				</div>
+      	<div class="keys">
+					<div class="calculator-contain-within">
+      		<!-- operators and other keys -->
+					<!-- ko with:$data.button7 --><button data-bind="button:$data"></button><!-- /ko -->
+					<!-- ko with:$data.button8 --><button data-bind="button:$data"></button><!-- /ko -->
+					<!-- ko with:$data.button9 --><button data-bind="button:$data"></button><!-- /ko -->
+
+					<!-- ko with:$data.buttonplus -->
+						<button data-bind="button:$data" class="operator"></button>
+					<!-- /ko -->
+
+      		<!-- ko with:$data.button4 --><button data-bind="button:$data"></button><!-- /ko -->
+					<!-- ko with:$data.button5 --><button data-bind="button:$data"></button><!-- /ko -->
+					<!-- ko with:$data.button6 --><button data-bind="button:$data"></button><!-- /ko -->
+
+					<!-- ko with:$data.buttonminus -->
+      			<button data-bind="button: $data" class="operator"></button>
+					<!-- /ko -->
+
+					<!-- ko with:$data.button1 --><button data-bind="button:$data"></button><!-- /ko -->
+					<!-- ko with:$data.button2 --><button data-bind="button:$data"></button><!-- /ko -->
+					<!-- ko with:$data.button3 --><button data-bind="button:$data"></button><!-- /ko -->
+
+					<!-- ko with:$data.buttondivide -->
+						<button data-bind="button: $data" class="operator"></button>
+					<!-- /ko -->
+
+					<!-- //ko with:$data.button0 -->
+      		<!-- <button data-bind="click:$parent.onNumberClicked,text:$data"></button> -->
+					<!-- //-/ko -->
+
+					<!-- ko with:$data.button0 -->
+      			<button data-bind="button:$data"></button>
+					<!-- /ko -->
+      		<span>.</span>
+
+      		<!-- ko with:$data.buttonequals -->
+						<button data-bind="button:$data"></button>
+					<!-- /ko -->
+
+					<!-- Works but not using -->
+      		<!-- ko with:$data.buttonclear --><!--<button data-bind="button:$data"></button>--><!-- /ko -->
+
+					<!-- ko with:$data.buttonmultiply -->
+						<button data-bind="button: $data" class="operator"></button>
+					<!-- /ko -->
+      	</div>
+      </div>
+
+	</body>
+</html>
